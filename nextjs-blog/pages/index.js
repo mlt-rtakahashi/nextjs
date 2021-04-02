@@ -12,10 +12,13 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Read <Link href="/posts/first-post"><a>this page!</a></Link>
+          Read <Link href="/posts/first-post"><a>this page!(Link)</a></Link>
+        </h1>
+        <h1 className={styles.title}>
+          Read <a href="/posts/first-post">this page!(Not Link)</a>
         </h1>
       </main>
-      
+
     </div>
   )
 }
