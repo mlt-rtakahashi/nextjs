@@ -1,24 +1,20 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import Link from 'next/link'
+import Layout, { siteTitle } from '../components/layout'
+import utilStyles from '../styles/utils.module.css'
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <Layout home>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>{siteTitle}</title>
       </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Read <Link href="/posts/first-post"><a>this page!(Link)</a></Link>
-        </h1>
-        <h1 className={styles.title}>
-          Read <a href="/posts/first-post">this page!(Not Link)</a>
-        </h1>
-      </main>
-
-    </div>
+      <section className={utilStyles.headingMd}>
+        <h3>My Profile</h3>
+        <p>Hello. <br/>My name is Ryo Takahashi.<br/>
+           This site is portfolio with maked by NextJS!</p>
+        <h3>My Project</h3>
+        <a href="/posts/first-post">First Post</a>
+      </section>
+    </Layout>
   )
 }
